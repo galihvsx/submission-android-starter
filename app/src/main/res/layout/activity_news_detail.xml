@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewsDetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/top_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/secondary_background"
+            app:navigationIcon="@drawable/rounded_arrow_back_24"
+            app:title="@string/news_detail"
+            app:menu="@menu/detail_page_menu"
+            android:paddingEnd="8dp"
+            android:paddingStart="0dp"
+            app:navigationIconTint="@color/primary_text_color"
+            app:titleTextAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/news_detail_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:shapeAppearanceOverlay="@style/RoundedCorners"
+                android:scaleType="centerCrop"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="12dp"
+                android:src="@drawable/news_1_thumb" />
+
+            <TextView
+                android:id="@+id/news_detail_title"
+                style="@style/TextStyle.NewsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:scrollHorizontally="false"
+                android:text="@string/sample_news_title"
+                android:textAppearance="?attr/textAppearanceSubtitle1"
+                tools:ignore="TextSizeCheck" />
+
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="8dp"
+                app:dividerColor="@color/secondary_text_color"
+                android:layout_marginHorizontal="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:paddingHorizontal="20dp">
+
+                <TextView
+                    android:id="@+id/news_detail_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/secondary_text_color"
+                    android:text="@string/sample_news_date" />
+
+                <TextView
+                    android:id="@+id/news_detail_source"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sample_news_category"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/secondary_text_color" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/news_detail_description"
+                android:layout_marginTop="8dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sample_news_desc"
+                tools:ignore="VisualLintLongText" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

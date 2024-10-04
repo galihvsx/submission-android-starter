@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutPageActivity">
+
+    <!-- AppBarLayout untuk menampung Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <!-- Toolbar di dalam AppBarLayout -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/top_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/secondary_background"
+            app:navigationIcon="@drawable/rounded_arrow_back_24"
+            app:title="@string/my_profile"
+            app:navigationIconTint="@color/primary_text_color"
+            app:titleTextAppearance="@style/TextAppearance.AppCompat.Title" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- ScrollView untuk konten yang dapat di-scroll -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- Konten halaman about -->
+        <LinearLayout
+            android:id="@+id/about_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="16dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="152dp"
+                android:layout_height="152dp"
+                android:elevation="0dp"
+                app:strokeWidth="2dp"
+                app:cardCornerRadius="1000dp"
+                app:strokeColor="@color/primary_color">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/logo"
+                    android:contentDescription="@string/my_profile" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/about_me"
+                android:paddingHorizontal="12dp"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="4dp"
+                app:dividerColor="@color/primary_text_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:layout_marginVertical="8dp"
+                tools:ignore="UseCompoundDrawables">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="@string/my_name"
+                    android:src="@drawable/baseline_person_24"
+                    app:tint="@color/secondary_text_color" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_name"
+                    android:textStyle="bold"
+                    android:layout_marginStart="12dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:layout_marginVertical="4dp"
+                android:gravity="center_vertical"
+                android:background="?attr/selectableItemBackground">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="@string/my_name"
+                    android:src="@drawable/baseline_email_24"
+                    app:tint="@color/secondary_text_color" />
+
+                <TextView
+                    android:id="@+id/email_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_email"
+                    android:textStyle="bold"
+                    android:layout_marginStart="12dp"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="2dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:layout_marginVertical="4dp"
+                android:gravity="center_vertical"
+                android:background="?attr/selectableItemBackground">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="@string/my_name"
+                    android:src="@drawable/round_local_phone_24"
+                    app:tint="@color/secondary_text_color" />
+
+                <TextView
+                    android:id="@+id/phone_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_phone"
+                    android:textStyle="bold"
+                    android:layout_marginStart="12dp"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="2dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

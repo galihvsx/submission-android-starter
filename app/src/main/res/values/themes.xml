@@ -1,0 +1,34 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.DCNews" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.DCNews" parent="Base.Theme.DCNews" />
+
+    <style name="TextStyle.NewsTitle" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">@color/primary_text_color</item>
+    </style>
+
+    <style name="TextStyle.NewsTime" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">@color/secondary_text_color</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="TextStyle.NewsCategory" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">@color/secondary_text_color</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="CircleShape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="RoundedCorners">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+</resources>
